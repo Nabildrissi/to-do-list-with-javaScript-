@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        #taskInput {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #addTaskBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #addTaskBtn:hover {
+            background-color: #218838;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li.completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+        .deleteBtn, .updateBtn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 5px 10px;
+            margin-left: 5px;
+        }
+        .updateBtn {
+            background-color: #007bff;
+        }
+        .deleteBtn:hover {
+            background-color: #c82333;
+        }
+        .updateBtn:hover {
+            background-color: #0056b3;
+        }
+        .task-buttons {
+            display: flex;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-do List</h1>
+    <input type="text" id="taskInput" placeholder="Ajouter une nouvelle tâche...">
+    <button id="addTaskBtn">Ajouter</button>
+    
+    <br><br>
+    
+    <input type="text" id="filterInput" placeholder="Filtrer par nom...">
+    
+    <ul id="taskList"></ul>
+    
+    <h2>To-do List avec Cases à Cocher</h2>
+    <input type="text" id="checkboxTaskInput" placeholder="Ajouter une nouvelle tâche...">
+    <button id="addCheckboxTaskBtn">Ajouter</button>
+    
+    <ul id="checkboxTaskList"></ul>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
